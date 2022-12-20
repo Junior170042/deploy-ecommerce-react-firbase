@@ -19,34 +19,30 @@ const Login = () => {
         }
 
     })
-    const showErrors = (err) => {
+     const showErrors = (err) => {
+        const _errUser = document.querySelector('.errorUsers');
+        const _errPass = document.querySelector('.errorPasss');
 
         if (err === 'auth/user-not-found') {
 
-            if(errUser){
-                
-                errUser.textContent = "Usuario no registrado";
+            if (_errUser) {
+                _errUser.textContent = "Usuario no registrado";
             }
-
-            errUser.classList.remove('d-none')
-            errPass.classList.add('d-none')
+            _errUser.classList.remove('d-none')
+            _errPass.classList.add('d-none')
 
 
         }
         if (err === 'auth/wrong-password') {
 
-            if (errPass) {
-
-                errPass.textContent = "Contraseña incorrecta";
-               
+            if (_errPass) {
+                _errPass.textContent = "Contraseña incorrecta";
             }
-            
-             errPass.classList.remove('d-none');
-                errUser.classList.add('d-none');
+            _errPass.classList.remove('d-none');
+            _errUser.classList.add('d-none');
 
         }
     }
-
     const handleUserLogin = async (e) => {
         e.preventDefault();
         const correo = e.target.EmailUser.value
