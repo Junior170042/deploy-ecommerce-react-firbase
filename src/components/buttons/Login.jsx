@@ -25,9 +25,8 @@ const Login = () => {
 
         if (err === 'auth/user-not-found') {
 
-            if (_errUser) {
-                _errUser.textContent = "Usuario no registrado";
-            }
+         
+              _errUser.textContent = "Usuario no registrado";
             _errUser.classList.remove('d-none')
             _errPass.classList.add('d-none')
 
@@ -35,9 +34,8 @@ const Login = () => {
         }
         if (err === 'auth/wrong-password') {
 
-            if (_errPass) {
-                _errPass.textContent = "Contraseña incorrecta";
-            }
+            
+              _errPass.textContent = "Contraseña incorrecta";
             _errPass.classList.remove('d-none');
             _errUser.classList.add('d-none');
 
