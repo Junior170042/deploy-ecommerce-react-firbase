@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.active:not(.titulo) {
+  border-bottom: 2px solid rgb(255, 196, 0) !important;
+}
+
+#btnCerrar:hover {
+  border-bottom: 2px solid rgb(255, 196, 0) !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.navbar-nav > li > a {
+  font-size: 18px;
+}
+
+.navbar-brand {
+  letter-spacing: 3px;
+}
+
+.card {
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btns {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product img {
+  transition: all 0.5s ease;
+}
+
+.product img:hover {
+  transform: scale(1.1);
+}
+
+.creditCard {
+  display: none;
+}
+
+.myAlert {
+  width: 300px;
+  height: 200px;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 1px 8px 8px 1px rgb(117, 117, 117);
+}
+
+.containerMsj {
+  position: fixed; /* Sit on top of the page content */
+  /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#link {
+  text-decoration: none;
+  float: right;
+  margin-left: 10px;
+}
+
+#user {
+  font-size: 16px;
+}
+
+#user i {
+  font-size: 30px;
+}
+
+.error {
+  border: 1px solid rgb(155, 53, 53);
+  background-color: rgb(250, 228, 228);
+}
+
+@media screen and (max-width: 600px) {
+  a#brand {
+    padding-left: 55px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .myAlert p {
+    font-size: 20px;
+  }
+  .myAlert strong {
+    margin-left: 14px;
+    text-align: center;
+  }
+
+  .myAlert {
+    width: 250px;
+    height: 200px;
+  }
+}
