@@ -1,42 +1,56 @@
-# Entrega Final
+# Smart Lite Shop - E-Commerce Migration
 
-Vista Final del sitio [Demo de la página](https://genuine-toffee-a5c844.netlify.app/)
+A modern e-commerce application built with React 19, Vite, TypeScript, and Tailwind CSS. This project migrated from a legacy Create React App (CRA) structure using Bootstrap to a high-performance modern stack.
 
-## Descripcion del trabajo
+## 🚀 Technologies
 
-Es una página web creada durante nuestro curso de fondamento de desarrollo Front-end, esta página esta creada
-con Bootstrap de la versión 5 código html 5, css , javascript y firebase(auth..). Durante las primeras entregas que hemos hecho previamente,
-como lo habian pedido, hemos utilizado javaScript puro para manejar los componentes de la página web, en esta entrega final,
-hemos utilizado una de las librerias de javaScript cuyo nombre es React, comparativamente de las dos primeras entregas, hemos 
-realizado algunas modificaciones dentro de la página web usando las utilidades de la libreria de javaScript (React). Hemos creado 
-componentes que nos permiten odenar d una manera limpia y correcta nuestro código. Además, la libreria React nos permite manejar 
-facilmente las etiqutas html mediante los componentes creados con la entensón jsx la cual nos permite incorporar de manera rápida
-y estática las etiquetas html dentro de nuestros códigos javaScript.
+- **React 19**: Latest version of the UI library.
+- **Vite 6**: Next-generation frontend tooling.
+- **TypeScript**: Static typing for enhanced developer experience and reliability.
+- **Tailwind CSS**: Utility-first CSS framework for custom, premium designs.
+- **Redux**: Global state management for the shopping cart.
+- **Firebase 11**: Authentication and backend services.
 
-Como lo hemos mencionado previamente, hemos utilizado varios componentes de Bootstrap dentro de la página web para una vista más
-agradable del sitio web, a parte de Bootstrap, hemos utilizado código de css personalizado para modificar algunos estilos
-predeterminados de Bootstrap y de los navegadores. También hemos usados código de css para cambiar de manera personalizada algunos
-componentes que hemos creados para una buena experiencia del usuario.
+## ✨ Key Features
 
-### Utilidades de la página web
+- **Modern UI/UX**: Completely redesigned interface using Tailwind CSS, featuring glassmorphism effects, smooth transitions, and a mobile-first responsive layout.
+- **Optimized Cart**: Real-time cart management with Redux.
+- **Dynamic Product Detail**: Interactive views for exploring products.
+- **Secure Checkout**: Seamless payment simulation with various methods.
+- **Firebase Auth**: Robust login and registration system.
 
-Es una pagina web basada en una tienda en linea donde el usuario va a poder ver unas variedades de productos, el usuario va a poder
-seleccionar o elegir uno o varios productos segun su gusto y también el usurio puede eliminar selecciones a caso de que esté se arrepiente de
-sus seproductos seleccionados. Luego de sus elecciones el usuario puede dirigirse para procesar su pago segun su método de pago elegido.
-Además de realizar compra, el usuario puede creer una cuenta para luego iniciar sesión mediante su cuenta creada para que en un futuro
-pueda acceder a sus historiales de compra o sus beneficios (Esta parte no esta desarrollada dentro la página, solo el usuario puede ver su 
-nombre reflejado después de haber iniciado una sesión en su cuenta)
+## 🛠️ Getting Started
 
+### Prerequisites
 
-## Agradecimiento
-Le doy las gracias a la Empresa de SMU por la iniciativa de realizar este curso. he aprendido muchas cosas nuevas mediante este curso, es 
-una gran oportunidad para mi de aprender cosas nuevas basadas en la nueva tecnologia. Espero que haya otra oportunidad para poder seguir aprediendo
-más cosas interesantes como este curso de desarrollo front-end
+- Node.js (Latest LTS version recommended)
+- npm or yarn
 
-# Gracias!!
+### Installation
 
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
 
-### St verty Vernard
-Apacionado del desarrollo front-end y back-end!
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
+## 🏗️ Build
+
+To create a production-ready bundle:
+
+```bash
+npm run build
+```
+
+## 📝 License
+
+Distributed under the MIT License.
