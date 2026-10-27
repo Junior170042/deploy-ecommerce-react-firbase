@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import GoogleLogin from './buttons/GoogleLogin';
-import { userOff } from './buttons/Firebase';
+import { useAuth0 } from '@auth0/auth0-react';
+import AuthLogin from './buttons/AuthLogin';
 import CartBtn from './buttons/CartBtn';
 
 const Header: React.FC = () => {
-    const [user, setUser] = useState<boolean>(false);
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-    const userState = localStorage.getItem('userState');
-    const userName = localStorage.getItem('userName');
+    const { isAuthenticated, isLoading, user, logout } = useAuth0();
+    const userName = user?.name || user?.email || 'Usuario';
 
-    useEffect(() => {
-        if (userState === 'true') {
-            setUser(true);
-        }
-    }, [userState]);
+    const handleLogout = () => logout({ logoutParams: { returnTo: window.location.origin } });
 
     const handleMenuToggle = () => setIsMenuOpen(!isMenuOpen);
 
@@ -70,8 +65,8 @@ const Header: React.FC = () => {
 
                     <div className="flex items-center space-x-4 border-l pl-8 border-gray-200">
                         <CartBtn />
-                        {!user ? (
-                            <GoogleLogin />
+                        {!isAuthenticated ? (
+                            !isLoading && <AuthLogin />
                         ) : (
                             <div className="flex items-center space-x-4">
                                 <span className="flex items-center text-gray-700 font-medium">
@@ -80,16 +75,16 @@ const Header: React.FC = () => {
                                     </svg>
                                     {userName}
                                 </span>
-                                <NavLink
-                                    to="/"
+                                <button
+                                    type="button"
                                     className="text-red-500 hover:text-red-700 font-medium text-sm flex items-center"
-                                    onClick={userOff}
+                                    onClick={handleLogout}
                                 >
                                     <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                                     </svg>
                                     Cerrar sesión
-                                </NavLink>
+                                </button>
                             </div>
                         )}
                     </div>
@@ -122,8 +117,8 @@ const Header: React.FC = () => {
                     </ul>
                     <div className="pt-4 border-t border-gray-200 flex flex-col space-y-4">
                         <CartBtn />
-                        {!user ? (
-                            <GoogleLogin />
+                        {!isAuthenticated ? (
+                            !isLoading && <AuthLogin />
                         ) : (
                             <div className="flex flex-col space-y-3">
                                 <span className="font-medium text-gray-800 flex items-center">
@@ -132,13 +127,13 @@ const Header: React.FC = () => {
                                     </svg>
                                     {userName}
                                 </span>
-                                <NavLink
-                                    to="/"
+                                <button
+                                    type="button"
                                     className="text-red-500 font-semibold"
-                                    onClick={() => { userOff(); setIsMenuOpen(false); }}
+                                    onClick={() => { handleLogout(); setIsMenuOpen(false); }}
                                 >
                                     Cerrar sesión
-                                </NavLink>
+                                </button>
                             </div>
                         )}
                     </div>
